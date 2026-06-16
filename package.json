@@ -1,0 +1,26 @@
+{
+  "name": "your-phone-lingingg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abby-w-gail/your-phone-lingingg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Abby-w-gail/your-phone-lingingg/issues"
+  },
+  "homepage": "https://github.com/Abby-w-gail/your-phone-lingingg#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}
