@@ -6,7 +6,8 @@ const { Server } = require("socket.io");const app = express();const server = htt
 	}
 });
 // serve website files is in the public folder
-app.use(express.static("public"));const users = {};io.on("connection", (socket) => {	console.log("user connected:", socket.id);
+app.use(express.static("public"));const users = {};
+io.on("connection", (socket) => {console.log("user connected:", socket.id);
 	// when someone joins voice
 	socket.on("join-call", (username) => {		users[socket.id] = {
 			username: username
@@ -77,9 +78,10 @@ app.use(express.static("public"));const users = {};io.on("connection", (socket) 
 				"user-left",
 				socket.id
 			);	
-			}
-			});
-			});
-			const PORT = process.env.PORT || 3000;
+		}
+	});
+});
+			
+const PORT = process.env.PORT || 3000;
 			
 server.listen(PORT,	() => {console.log(`server running on port ${PORT}`);});
