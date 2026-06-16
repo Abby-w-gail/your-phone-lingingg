@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>voice "chat"</title>
+
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+	<div id="container">
+
+		<div id="main">
+
+			<h1>voice call cant be that hard</h1>
+
+			<div id="controls">
+
+				<input
+					type="text"
+					id="username"
+					placeholder="enter a name"
+					maxlength="20"
+				>
+
+			<button id="joinBtn">
+				join voice call
+			</button>
+
+			<button id="muteBtn" disabled>
+				mute
+			</button>
+			
+			<button id="screenBtn" disabled>
+				share screen
+			</button>
+			
+			<label>
+				volume
+				<input id="volumeSlider" type="range" min="0" max="100" value="100">
+			</label>
+
+			<video id="screenVideo" autoplay></video>
+
+			</div>
+
+			<div id="status">
+				not connected :C
+			</div>
+
+		</div>
+
+		<div id="sidebar">
+
+			<h2>people in call</h2>
+
+			<div id="userList">
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="app.js"></script>
+
+</body>
+</html>
