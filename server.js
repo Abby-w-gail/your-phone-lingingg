@@ -76,10 +76,10 @@ app.use(express.static("public"));const users = {};io.on("connection", (socket) 
 			socket.broadcast.emit(
 				"user-left",
 				socket.id
-			);		}	});});const PORT = process.env.PORT || 3000;
-server.listen(
-	PORT,
-	() => {		console.log(
-			`server running on port ${PORT}`
-		);	}
-);
+			);	
+			}
+			});
+			});
+			const PORT = process.env.PORT || 3000;
+			
+server.listen(PORT,	() => {console.log(`server running on port ${PORT}`);});
