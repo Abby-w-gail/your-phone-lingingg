@@ -1,94 +1,189 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 body {
-	font-family: Arial, sans-serif;
-	background: #111;
-	color: white;
-	height: 100vh;
+	margin: 0;
+	background: #eef2ff;
+	font-family: "Times New Roman", serif;
+	color: #222;
 }
 
+
+/* whole page */
 #container {
 	display: flex;
-	height: 100vh;
+
+	width: 1000px;
+	height: 80vh;
+
+	margin: 40px auto;
+
+	gap: 10px;
 }
 
+
+/* main area */
 #main {
 	flex: 1;
-	padding: 40px;
+
+	background: white;
+	border: 1px solid #aaa;
+
+	padding: 20px;
+
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+
+	gap: 15px;
 }
+
 
 h1 {
-	margin-bottom: 40px;
-	font-size: 42px;
+	margin: 0;
+
+	color: #800000;
+
+	font-size: 26px;
 }
 
+
+/* buttons/input area */
 #controls {
 	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	width: 300px;
+
+	flex-wrap: wrap;
+
+	align-items: center;
+
+	gap: 10px;
+
+	border-bottom: 1px solid #aaa;
+
+	padding-bottom: 15px;
 }
 
-#username {
-	padding: 12px;
-	border: none;
-	border-radius: 8px;
-	font-size: 16px;
+
+input {
+	padding: 8px;
+
+	border: 1px solid #aaa;
+
+	background: white;
+
+	color: black;
+
+	border-radius: 0;
+
+	font-family: "Times New Roman";
 }
 
-#joinBtn {
-	padding: 14px;
-	border: none;
-	border-radius: 8px;
+
+button {
+	padding: 6px 10px;
+
+	border: 1px solid #888;
+
+	background: #eee;
+
+	color: black;
+
+	border-radius: 0;
+
 	cursor: pointer;
-	font-size: 18px;
+
+	font-family: "Times New Roman";
 }
 
-#joinBtn:hover {
-	opacity: 0.9;
+
+button:hover {
+	background: #ddd;
 }
 
+
+button:disabled {
+	color: #777;
+	background: #ddd;
+	cursor: default;
+}
+
+
+/* volume slider */
+label {
+	display: flex;
+
+	align-items: center;
+
+	gap: 5px;
+}
+
+
+/* status */
 #status {
-	margin-top: 25px;
-	font-size: 18px;
-	color: #ccc;
+	color: #800000;
+
+	font-weight: bold;
+
+	border-bottom: 1px solid #ddd;
+
+	padding-bottom: 10px;
 }
 
-#sidebar {
-	width: 250px;
-	background: #1d1d1d;
-	border-left: 1px solid #333;
-	padding: 20px;
+
+/* screen sharing */
+#screenVideo {
+	width: 100%;
+
+	max-height: 55vh;
+
+	border: 1px solid #aaa;
+
+	display: none;
 }
+
+
+/* sidebar */
+#sidebar {
+	width: 220px;
+
+	background: white;
+
+	border: 1px solid #aaa;
+
+	padding: 10px;
+
+	overflow-y: auto;
+}
+
 
 #sidebar h2 {
-	margin-bottom: 20px;
+	margin-top: 0;
+
+	color: #800000;
+
+	font-size: 20px;
+
+	border-bottom: 1px solid #aaa;
+
+	padding-bottom: 5px;
 }
 
-.user {
-	background: #2b2b2b;
-	padding: 10px;
-	margin-bottom: 8px;
-	border-radius: 8px;
+
+/* usernames */
+#userList div {
+	padding: 6px;
+
+	border-bottom: 1px solid #eee;
 }
 
+
+/* back link */
+.icon {
+	color: #000080;
+
+	display: block;
+
+	margin-top: 10px;
+}
+
+
+/* audio players hidden */
 audio {
 	display: none;
-}
-
-#screenVideo {
-	width: 90%;
-	max-width: 1200px;
-	height: auto;
-	
-	margin-top: 30px;
-	display: none;
-	border-radius: 10px;
 }
