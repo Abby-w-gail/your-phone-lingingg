@@ -195,7 +195,8 @@ screenBtn.addEventListener("click", async () => {
 	if (!sharingScreen) {
 		try {
 			screenStream = await navigator.mediaDevices.getDisplayMedia({
-				video: true
+				video: true,
+				audio: true
 			});
 			const screenTrack = screenStream.getVideoTracks()[0];
 			screenVideo.srcObject = screenStream;
